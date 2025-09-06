@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Threat Detection System Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flow-arrow {
+            font-size: 2.5rem;
+            line-height: 1;
+            color: #A05195;
+            transform: rotate(90deg);
+        }
+        @media (min-width: 768px) {
+           .flow-arrow {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100" style="background-color: #003F5C;">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-2">Multi-Layered Border Threat Detection System</h1>
+            <p class="text-lg md:text-xl font-light" style="color: #FFA600;">An AI-Powered Strategic Framework for Modern Military Operations</p>
+        </header>
+
+        <main>
+            <section id="threats" class="mb-12">
+                <h2 class="text-3xl font-bold text-center text-white mb-8">Neutralizing Key Incursion Threats</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white bg-opacity-10 rounded-lg shadow-xl p-6">
+                        <div class="text-6xl mb-4">🚶</div>
+                        <h3 class="text-2xl font-semibold text-white">Personnel</h3>
+                        <p class="mt-2" style="color: #DDDDDD;">Detecting unauthorized foot traffic across restricted zones using a combination of seismic, acoustic, and thermal sensors.</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-lg shadow-xl p-6">
+                        <div class="text-6xl mb-4">✈️</div>
+                        <h3 class="text-2xl font-semibold text-white">Drones</h3>
+                        <p class="mt-2" style="color: #DDDDDD;">Identifying and tracking UAVs with specialized acoustic signatures and radar, mitigating aerial surveillance and threats.</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-lg shadow-xl p-6">
+                        <div class="text-6xl mb-4">🚚</div>
+                        <h3 class="text-2xl font-semibold text-white">Vehicles</h3>
+                        <p class="mt-2" style="color: #DDDDDD;">Monitoring for vehicle incursions through long-range seismic detection and visual/thermal confirmation.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="defense-system" class="mb-12">
+                 <div class="bg-white rounded-lg shadow-2xl p-6 md:p-8" style="background-color: #2F4B7C;">
+                    <h2 class="text-3xl font-bold text-center text-white mb-8">The Two-Tiered Defense System</h2>
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+                        <div class="flex-1 text-center border-2 border-dashed rounded-lg p-6 w-full" style="border-color: #665191;">
+                            <span class="text-sm font-bold uppercase" style="color: #FFA600;">Tier 1</span>
+                            <h3 class="text-2xl font-semibold text-white mt-2">Initial Detection</h3>
+                            <p class="text-gray-300 mt-2">Ground-based sensors (Seismic, Acoustic) provide the first alert of potential activity, acting as a persistent, covert tripwire.</p>
+                        </div>
+
+                        <div class="flow-arrow font-thin">➔</div>
+
+                        <div class="flex-1 text-center border-2 border-dashed rounded-lg p-6 w-full" style="border-color: #A05195;">
+                            <span class="text-sm font-bold uppercase" style="color: #FFA600;">Tier 2</span>
+                            <h3 class="text-2xl font-semibold text-white mt-2">AI Verification</h3>
+                            <p class="text-gray-300 mt-2">AI-powered image recognition (Thermal, Visual) verifies the alert, classifies the threat, and minimizes false positives before human review.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sensor-effectiveness" class="mb-12">
+                <div class="bg-white rounded-lg shadow-2xl p-6 md:p-8">
+                    <h2 class="text-3xl font-bold text-center text-gray-800 mb-2">Sensor Effectiveness Across Terrains</h2>
+                    <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">The system's strength lies in deploying the right sensors for the specific environment. This chart compares the operational effectiveness of each sensor type across the most common challenging topographies.</p>
+                    <div class="chart-container">
+                        <canvas id="sensorEffectivenessChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tech-matrix" class="mb-12">
+                <div class="bg-white rounded-lg shadow-2xl p-6 md:p-8">
+                    <h2 class="text-3xl font-bold text-center text-gray-800 mb-2">Sensor & Communication Matrix</h2>
+                    <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">This matrix provides specific recommendations for sensor and communication deployment based on environmental and geographical conditions.</p>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-500">
+                            <thead class="text-xs text-white uppercase" style="background-color: #2F4B7C;">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">Condition</th>
+                                    <th scope="col" class="px-6 py-3">Sensor Configuration</th>
+                                    <th scope="col" class="px-6 py-3">Communication Method</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-white border-b hover:bg-gray-50">
+                                    <td class="px-6 py-4 font-bold text-gray-900">Mountains</td>
+                                    <td class="px-6 py-4">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li class="font-mono"><strong>Thermal/Visual Cameras:</strong> Long-range surveillance from elevated positions.</li>
+                                            <li><strong>Seismic Sensors:</strong> Detect ground vibrations in valleys and trails.</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li><strong>Laser Communication:</strong> Primary link for high-bandwidth backhaul across clear valleys.</li>
+                                            <li><strong>RF Links:</strong> Redundant links and short-range communication in obstructed areas.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b hover:bg-gray-50">
+                                    <td class="px-6 py-4 font-bold text-gray-900">Dense Forests</td>
+                                    <td class="px-6 py-4">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li><strong>Acoustic & Seismic Sensors:</strong> Primary detection under dense canopy.</li>
+                                            <li><strong>Thermal Cameras:</strong> Augment detection by capturing heat signatures through foliage.</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li><strong>RF Communication:</strong> Primary mode for resilient, obstacle-penetrating mesh networks.</li>
+                                            <li><strong>Optical Fiber:</strong> Secure, fixed links for major hubs if possible.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b hover:bg-gray-50">
+                                    <td class="px-6 py-4 font-bold text-gray-900">Deserts / Open Plains</td>
+                                    <td class="px-6 py-4">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li class="font-mono"><strong>Long-Range Thermal/Visual:</strong> Extensive range for wide-area surveillance.</li>
+                                            <li><strong>Radar:</strong> Long-range vehicle and object detection, less affected by sand storms.</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li><strong>Laser Communication:</strong> Highly effective and reliable primary backhaul due to clear line-of-sight.</li>
+                                            <li><strong>RF Links:</strong> Redundancy to handle temporary dust storm disruptions.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="bg-white hover:bg-gray-50">
+                                    <td class="px-6 py-4 font-bold text-gray-900">Fog, Rain & Dust</td>
+                                    <td class="px-6 py-4">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li><strong>Radar & Acoustic:</strong> Reliable for detection in low-visibility weather.</li>
+                                            <li class="font-mono"><strong>Thermal/IR Cameras:</strong> Reduced effectiveness, but still capture heat signatures.</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li><strong>RF Communication:</strong> The most reliable option, as its signals penetrate atmospheric particles.</li>
+                                            <li><strong>Optical Fiber:</strong> Unaffected by weather, used for secure, fixed connections.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ai-pipeline" class="mb-12">
+                <div class="bg-white rounded-lg shadow-2xl p-6 md:p-8">
+                    <h2 class="text-3xl font-bold text-center text-gray-800 mb-2">The AI Image Processing Pipeline</h2>
+                    <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Raw sensor data is transformed into actionable intelligence through a series of AI-powered steps, ensuring rapid and accurate threat verification.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center">
+                        <div class="p-4 rounded-lg text-center font-semibold bg-gray-200" style="color: #665191;">1. Data Ingestion</div>
+                        <div class="hidden md:block text-4xl text-center font-thin" style="color: #d45087;">→</div>
+                        <div class="block md:hidden text-4xl text-center font-thin" style="color: #d45087; transform: rotate(90deg);">→</div>
+                        <div class="p-4 rounded-lg text-center font-semibold bg-gray-200" style="color: #665191;">2. Pre-processing</div>
+                        <div class="hidden md:block text-4xl text-center font-thin" style="color: #d45087;">→</div>
+                        <div class="block md:hidden text-4xl text-center font-thin" style="color: #d45087; transform: rotate(90deg);">→</div>
+                        <div class="p-4 rounded-lg text-center font-semibold bg-gray-200" style="color: #665191;">3. Object Detection</div>
+                        <div class="hidden md:block text-4xl text-center font-thin" style="color: #d45087;">→</div>
+                        <div class="block md:hidden text-4xl text-center font-thin" style="color: #d45087; transform: rotate(90deg);">→</div>
+                        <div class="p-4 rounded-lg text-center font-semibold bg-gray-200" style="color: #665191;">4. Threat Classification</div>
+                        <div class="hidden md:block text-4xl text-center font-thin" style="color: #d45087;">→</div>
+                        <div class="block md:hidden text-4xl text-center font-thin" style="color: #d45087; transform: rotate(90deg);">→</div>
+                        <div class="p-4 rounded-lg text-center font-semibold bg-gray-200" style="color: #665191;">5. Actionable Intelligence</div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <section id="comms-strategy">
+                    <div class="bg-white rounded-lg shadow-2xl p-6 md:p-8 h-full">
+                        <h2 class="text-3xl font-bold text-center text-gray-800 mb-2">Resilient Communication Strategy</h2>
+                        <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">A blended communication network ensures data integrity and operational continuity, even in remote environments. Each technology is allocated a specific role for optimal performance.</p>
+                        <div class="chart-container">
+                            <canvas id="commsStrategyChart"></canvas>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="ai-role">
+                    <div class="bg-white rounded-lg shadow-2xl p-6 md:p-8 h-full">
+                        <h2 class="text-3xl font-bold text-center text-gray-800 mb-2">The Core Role of AI</h2>
+                        <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Artificial intelligence is the engine that drives the system's efficiency and accuracy. It enhances key operational capabilities, turning raw data into actionable intelligence.</p>
+                         <div class="chart-container">
+                            <canvas id="aiRoleChart"></canvas>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <section id="system-of-systems" class="mb-12">
+                <div class="bg-white rounded-lg shadow-2xl p-6 md:p-8" style="background-color: #2F4B7C;">
+                    <h2 class="text-3xl font-bold text-center text-white mb-8">A Unified System of Systems</h2>
+                    <p class="text-center text-gray-300 mb-8 max-w-3xl mx-auto">The framework integrates all components into a cohesive, interoperable whole, ensuring seamless data flow from detection to decision under human oversight.</p>
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+                        <div class="p-4 bg-white bg-opacity-10 rounded-lg"><h3 class="font-semibold text-white">Sensor Grid</h3></div>
+                        <div class="p-4 bg-white bg-opacity-10 rounded-lg"><h3 class="font-semibold text-white">Comms Network</h3></div>
+                        <div class="p-4 bg-white bg-opacity-10 rounded-lg"><h3 class="font-semibold text-white">AI Core</h3></div>
+                        <div class="p-4 bg-white bg-opacity-10 rounded-lg"><h3 class="font-semibold text-white">Power Solutions</h3></div>
+                        <div class="p-4 bg-white bg-opacity-10 rounded-lg col-span-2 md:col-span-1"><h3 class="font-semibold text-white">Remote Ops Center</h3></div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12">
+            <p class="text-sm text-gray-400">&copy; 2025 Strategic Defense Analytics. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const brilliantBlues = ['#003f5c', '#665191', '#d45087', '#ff7c43', '#ffa600'];
+        const brilliantBluesAlt = ['#2F4B7C', '#A05195', '#F95D6A', '#FF7C43'];
+
+        const processLabel = (label) => {
+            if (label.length <= 16) {
+                return label;
+            }
+            const words = label.split(' ');
+            let lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > 16) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine);
+            }
+            return lines;
+        };
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            } else {
+              return label;
+            }
+        };
+
+        const chartTooltipOptions = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            }
+        };
+
+        const ctxSensor = document.getElementById('sensorEffectivenessChart').getContext('2d');
+        new Chart(ctxSensor, {
+            type: 'bar',
+            data: {
+                labels: ['Mountainous Terrain', 'Dense Forests', 'Open Plains/Desert'],
+                datasets: [
+                    {
+                        label: 'Seismic',
+                        data: [7, 8, 9],
+                        backgroundColor: brilliantBlues[1],
+                        borderColor: brilliantBlues[1],
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Acoustic',
+                        data: [6, 9, 7],
+                        backgroundColor: brilliantBlues[2],
+                        borderColor: brilliantBlues[2],
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Thermal/IR',
+                        data: [9, 7, 8],
+                        backgroundColor: brilliantBlues[3],
+                        borderColor: brilliantBlues[3],
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Visual (Day/Night)',
+                        data: [8, 5, 9],
+                        backgroundColor: brilliantBlues[4],
+                        borderColor: brilliantBlues[4],
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                ...chartTooltipOptions,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Effectiveness Score (1-10)'
+                        }
+                    }
+                },
+                plugins: {
+                     ...chartTooltipOptions.plugins,
+                    legend: {
+                        position: 'bottom',
+                    }
+                }
+            }
+        });
+
+        const ctxComms = document.getElementById('commsStrategyChart').getContext('2d');
+        new Chart(ctxComms, {
+            type: 'doughnut',
+            data: {
+                labels: [processLabel('RF Mesh (Sensor Grid)'), processLabel('Laser (High-Bandwidth Backhaul)'), processLabel('Optical Fiber (Secure Backbone)')],
+                datasets: [{
+                    label: 'Communication Role Allocation',
+                    data: [60, 25, 15],
+                    backgroundColor: brilliantBluesAlt,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                ...chartTooltipOptions,
+                maintainAspectRatio: false,
+                plugins: {
+                    ...chartTooltipOptions.plugins,
+                    legend: {
+                        position: 'bottom',
+                    }
+                }
+            }
+        });
+
+        const ctxAI = document.getElementById('aiRoleChart').getContext('2d');
+        new Chart(ctxAI, {
+            type: 'radar',
+            data: {
+                labels: ['Accuracy', 'Speed', 'Efficiency', 'Threat Classification', 'Scalability'],
+                datasets: [{
+                    label: 'AI Capability Enhancement',
+                    data: [9, 8, 9, 9.5, 8.5],
+                    fill: true,
+                    backgroundColor: 'rgba(212, 80, 135, 0.2)',
+                    borderColor: '#d45087',
+                    pointBackgroundColor: '#d45087',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#d45087'
+                }]
+            },
+            options: {
+                ...chartTooltipOptions,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 10,
+                        ticks: {
+                           display: false
+                        }
+                    }
+                },
+                 plugins: {
+                    ...chartTooltipOptions.plugins,
+                    legend: {
+                        position: 'bottom',
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
